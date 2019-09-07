@@ -57,7 +57,7 @@ gulp.task('html', function() {
 
 gulp.task('fonts', function() {
 
-    gulp.src('dist/fonts', {allowEmpty : true}).pipe(clean());
+    gulp.src('dist/fonts/**/*', {allowEmpty : true}).pipe(clean());
 
     return gulp.src('src/fonts/**/*')
                 .pipe(gulp.dest("dist/fonts"))
